@@ -1,31 +1,30 @@
 :root {
-  --bg-body: #F8F7F9;
+  --bg-body: #1A191B;
   --bg-header: #1A191B;
-  --bg-card: #fffffc;
-  --bg-image-placeholder: #d9d9d9;
+  --bg-card: #1A191B;
+  --bg-image-placeholder: #1A191B;
   
-  --text-main: #1E2223;
-  --text-header: #f8f8f6;
-  --text-muted: #3c3840;
-  --text-tag-item: #B0AFBA;
+  --text-main: #E9F7FC;
+  --text-header: #E9F7FC;
+  --text-muted: #E9F7FC;
+  --text-tag-item: #61D5D9;
 
-  --text-title: #F8F8F6;
-  --text-subtitle: #F8F7F9;
+  --text-title: #E9F7FC;
+  --text-subtitle: #E9F7FC;
   
-  --color-accent: #A5BC7C;
-  --color-accent-pfp: #A5BC7C;
-  --color-primary-link: #A5BC7C;
-  --color-footer-text: #fffffc;
+  --color-accent: #61D5D9;
+  --color-accent-pfp: #1A191B;
+  --color-primary-link: #61D5D9;
   
-  --border-tags: rgba(178, 174, 185, 1);
-  --shadow-nav: rgba(0, 0, 0, 0.25);
-  --shadow-card: rgba(195, 192, 201, 1);
-  --shadow-text: rgba(0, 0, 0, 0.25);
+  --border-tags: rgba(77, 81, 70, 1);
+  --shadow-nav: rgba(195, 192, 201, 0.11);
+  --shadow-card: rgba(195, 192, 201, 0);
+  --shadow-text: rgba(0, 0, 0, 0.5);
   
-  --sun-color: #1E2223;
-  --moon-color: #F8F8F6;
-  --sun-h-color: #A5BC7C;
-  --moon-h-color: #F8F8F6;
+  --sun-color: #E9F7FC;
+  --moon-color: #070709;
+  --sun-h-color: #61D5D9;
+  --moon-h-color: #070709;
 }
 
 [data-theme="dark"] {
@@ -64,7 +63,7 @@
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   background-color: var(--bg-body);
   color: var(--text-main);
   transition: background-color 0.3s ease, color 0.3s ease; 
@@ -75,7 +74,7 @@ p {
 }
 
 a {
-  color: var(--color-accent-pfp);
+  color: var(--color-accent);
 }
 
 .header {
@@ -95,7 +94,7 @@ a {
 }
 
 .header .title {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Coiny", system-ui;
   font-size: 26px;
   font-weight: 450;
   margin-top: 30px;
@@ -128,12 +127,20 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
   background: var(--bg-header);
   z-index: 0;
-  height: 360px;
   transition: background-color 0.3s ease;
+}
+
+.header-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-image {
@@ -142,6 +149,7 @@ a {
   background-color: var(--bg-body);
   border-radius: 50%;
   outline: 6px solid var(--color-accent-pfp);
+  outline-offset: -1px; 
   margin: 40px auto 0;
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   overflow: hidden;
@@ -179,7 +187,10 @@ a {
 .nav-ellipse {
   background-color: var(--bg-body);
   border-radius: 50%;
-  border: 4px solid var(--color-accent);
+
+  outline: 6px solid var(--color-accent-pfp);
+  outline-offset: -1px; 
+  /* border: 4px solid var(--color-accent); */
   width: 60px;
   height: 60px;
   margin-right: 20px;
@@ -215,13 +226,13 @@ a {
 }
 
 .nav-link, .nav-link-active {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Coiny", sans-serif;
   text-decoration: none;
   color: currentColor;
 }
 
 .nav-link-active {
-  color: var(--color-accent-pfp);
+  color: var(--color-accent);
   font-weight: 550;
 }
 
@@ -278,11 +289,11 @@ a {
 }
 
 .navigation a {
-  color: var(--color-primary-link);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 20px;
+  color: var(--sun-h-color);
+  font-family: "Coiny", system-ui;
+  font-size: 28px;
   font-weight: 600;
-  text-decoration: underline;
+   text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -292,11 +303,13 @@ a {
   justify-content: center;
   gap: 10px;
   padding: 12px;
-  outline: 2px dashed var(--border-tags);
-  width: fit-content;
-  max-width: 700px;
+  /* 
+  outline: 2px dashed var(--border-tags);    
   border-radius: 17px;
+  */
+  width: fit-content;
   margin: 0 auto 25px;
+  max-width: 700px;
   transition: outline-color 0.3s ease;
 }
 
@@ -304,10 +317,10 @@ a {
   background-color: var(--bg-body);
   border-radius: 100px;
   padding: 3px 15px;
-  outline: 2px solid var(--text-main);
+  /* outline: 2px solid var(--text-main); */
   font-size: 16px;
   color: var(--text-main);
-  font-family: "Inter", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   transition: background-color 0.3s ease, outline-color 0.3s ease, color 0.3s ease;
   user-select: none;
   display: inline-block;
@@ -328,13 +341,13 @@ a {
 }
 
 .tag-filter-label:hover .tag {
-  outline-color: var(--color-accent-pfp);
-  color: var(--color-accent-pfp);
+  outline-color: var(--sun-h-color);
+  color: var(--sun-h-color);
 }
 
 .tag-checkbox:checked + .tag {
-  color: var(--color-accent-pfp);
-  outline-color: var(--color-accent-pfp);
+  color: var(--sun-h-color);
+  outline-color: var(--sun-h-color);
 }
 
 .gallery {
@@ -562,7 +575,7 @@ a {
 .article-card .tag {
   font-size: 12px;
   color: var(--text-tag-item);
-  font-family: "Inter", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   transition: color 0.3s ease;
 }
 
@@ -609,8 +622,8 @@ a {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="dark"] .modal-content,
-[data-theme="dark"] .modal-right {
+[data-theme="light"] .modal-content,
+[data-theme="light"] .modal-right {
   background-color: var(--bg-card); 
 }
 
@@ -720,7 +733,7 @@ a {
 .footer .social-icons svg {
   width: 38px;
   height: 38px;
-  color: var(--color-footer-text);
+  color: var(--sun-color);
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -742,7 +755,7 @@ a {
   font-weight: 600;
   min-width: 320px;
   color: var(--color-primary-link);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -754,7 +767,7 @@ a {
   white-space: pre-wrap;
   font-size: 18px;
   color: var(--text-main);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   width: 45%;
   min-width: 320px;
   margin-left: auto;
@@ -764,7 +777,8 @@ a {
 }
 
 .qna {
-  font-size: 22px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .qna-question {
@@ -772,19 +786,19 @@ a {
   font-weight: 600;
   font-size: 18px;
   color: var(--color-primary-link);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   width: 45%;
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  text-decoration: underline;
 }
 
 .qna-question-text {
   white-space: pre-wrap;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 350;
   color: var(--text-main);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   width: 45%;
   min-width: 320px;
   margin-left: auto;

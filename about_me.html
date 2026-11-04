@@ -1,19 +1,18 @@
 <html lang="en">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-847PN84Z8Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-847PN84Z8Z');
-    </script>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <title>Quietwoods Portfolio</title>   
     <link rel="stylesheet" href="index.css" />
@@ -26,14 +25,18 @@
   <body>
     <div class="desktop">
       <header class="header">
-        <div class="header-background"></div>
+        <div class="header-background">
+          <img src="img/banner/banner.png">
+        </div>
         <div class="header-content">
-          <h1 class="title">QUIETWOODS</h1>
+
+          <!-- <h1 class="title">QUIETWOODS</h1>
           <h2 class="subtitle">PORTFOLIO</h2>
-          <p class="description">on this site, you can view my artworks</p>
-          <div class="profile-image">
+          <p class="description">on this site, you can view my artworks</p> -->
+
+          <!-- <div class="profile-image">
             <img src="img/pfp/avatar.png">
-          </div>
+          </div> -->
         </div>
       </header>
 
@@ -46,12 +49,12 @@
           <li class="nav-item"><a href="about_me.html" class="nav-link-active">ABOUT ME</a></li>
           <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
         </ul>
-        <div class="nav-icon" id="theme-toggle">
+        <!-- <div class="nav-icon" id="theme-toggle">
           <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none" class="celestial-icon">
             <path d="M30.25 54.7803C31.7625 54.7803 33 56.0178 33 57.5303C32.9999 59.0427 31.7624 60.3896 30.25 60.3896C28.7375 60.3896 27.5 59.2625 27.5 57.75V57.5303C27.5 56.0178 28.7375 54.7803 30.25 54.7803ZM9.01953 47.6025C10.092 46.53 11.825 46.53 12.8975 47.6025C13.97 48.675 13.97 50.408 12.8975 51.4805L12.54 51.8379C12.0176 52.3602 11.3026 52.6347 10.6152 52.6348C9.90023 52.6348 9.21211 52.3604 8.66211 51.8379C7.58967 50.7654 7.58978 49.0325 8.66211 47.96L9.01953 47.6025ZM47.5752 47.6025C48.6476 46.5302 50.3797 46.5302 51.4521 47.6025L51.8096 47.96C52.8821 49.0325 52.8821 50.7654 51.8096 51.8379C51.2871 52.3601 50.5996 52.6348 49.8848 52.6348C49.17 52.6347 48.4825 52.3602 47.9326 51.8379L47.5752 51.4805C46.5027 50.408 46.5027 48.675 47.5752 47.6025ZM30.25 11C40.8815 11 49.5 19.6185 49.5 30.25C49.5 40.8815 40.8815 49.5 30.25 49.5C19.6185 49.5 11 40.8815 11 30.25C11 19.6185 19.6185 11 30.25 11ZM2.75 27.5C4.2625 27.5 5.61035 28.7375 5.61035 30.25C5.61035 31.7625 4.48223 33 2.96973 33H2.75C1.2375 33 0 31.7625 0 30.25C0 28.7375 1.2375 27.5 2.75 27.5ZM57.5303 27.5C59.0427 27.5001 60.3896 28.7376 60.3896 30.25C60.3896 31.7625 59.2625 33 57.75 33H57.5303C56.0178 33 54.7803 31.7625 54.7803 30.25C54.7803 28.7375 56.0178 27.5 57.5303 27.5ZM8.66211 8.66211C9.73455 7.58967 11.4675 7.58979 12.54 8.66211L12.8975 9.01953C13.97 10.092 13.97 11.825 12.8975 12.8975C12.375 13.4474 11.6601 13.7226 10.9727 13.7227C10.2577 13.7227 9.56953 13.4473 9.01953 12.9248L8.66211 12.54C7.58979 11.4675 7.58967 9.73455 8.66211 8.66211ZM47.9326 8.69043C49.0051 7.61793 50.7371 7.61793 51.8096 8.69043C52.8821 9.76293 52.8821 11.4949 51.8096 12.5674L51.4521 12.9248C50.9297 13.4473 50.2423 13.7227 49.5273 13.7227C48.8124 13.7226 48.1252 13.4473 47.5752 12.9248C46.5027 11.8523 46.5028 10.1204 47.5752 9.04785L47.9326 8.69043ZM30.25 0C31.7625 0 33 1.2375 33 2.75C33 4.2625 31.7625 5.61035 30.25 5.61035C28.7375 5.61035 27.5 4.48223 27.5 2.96973V2.75C27.5 1.2375 28.7375 0 30.25 0Z" fill="var(--sun-color, #1E2223)"/>
             <path d="M44.0376 36.3428C43.7876 35.9209 43.0844 35.2647 41.3344 35.5772C40.3657 35.749 39.3813 35.8272 38.3969 35.7803C34.7563 35.624 31.4594 33.9522 29.1626 31.374C27.1313 29.1084 25.8813 26.1553 25.8657 22.9678C25.8657 21.1865 26.2094 19.4678 26.9126 17.8428C27.6001 16.2647 27.1157 15.4365 26.7719 15.0928C26.4126 14.7334 25.5688 14.2334 23.9126 14.9209C17.5219 17.6084 13.5688 24.0147 14.0376 30.874C14.5063 37.3272 19.0376 42.8428 25.0376 44.9209C26.4751 45.4209 27.9907 45.7178 29.5532 45.7803C29.8032 45.7959 30.0532 45.8115 30.3032 45.8115C35.5376 45.8115 40.4438 43.3428 43.5376 39.1397C44.5844 37.6865 44.3032 36.7647 44.0376 36.3428Z" fill="var(--moon-color, #F8F8F6)"/>
           </svg>
-        </div>
+        </div> -->
       </nav>
 
       <nav class="navigation">
@@ -65,7 +68,7 @@
       <div class="autor-info">
         <div class="greeting">
 Hi, I'm Quietwoods 
-Welcome to my digital art portfolio
+Welcome to my digital art portfolio )
         </div>
         <div class="greeting-info">
 I am an inspired artist who creates visual solutions and tells stories through graphics. I work with the full range of graphics: from 2D illustrations and pixel art to 3D modeling and animation. Focused on creating high-quality content.
@@ -76,17 +79,17 @@ Q&A
         </div>
         <div class="qna-question">Can I repost your artworks?</div>
 <div class="qna-question-text">Reposting is allowed only with proper credit :)
-Please always mention me as the author and include a link to the original source.</div>
+Please always mention me as the author and include a link to the original source</div>
 
         <div class="qna-question">Do you take commissions?</div>
         <div class="qna-question-text">Commissions are currently closed.</div>
 
         <div class="qna-question">What’s your setup?</div>
-        <div class="qna-question-text">I use One by Wacom pen tablet (my old buddy) and Bosto BT-16HD PRO graphics tablet.</div>
+        <div class="qna-question-text">I use One by Wacom pen tablet (my old buddy) and Bosto BT-16HD PRO graphics tablet</div>
 
         <div class="qna-question">Soughts about AI?</div>
         <div class="qna-question-text">I don’t use AI in any part of my process.
-I strictly do not allow my artworks to be used for training AI.</div>
+I strictly do not allow my artworks to be used for training AI</div>
       </div>
 
       
